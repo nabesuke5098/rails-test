@@ -1,18 +1,18 @@
-<% if flash[:error_messages] %>
+<% if flash[:error_messages]  %>
   <div class="alert alert-danger">
     <ul>
-      <% flash[:error_messages].each do |msg| %>
+      <% flash[:error_messages].each do |msg|  %>
         <li><%= msg %></li>
       <% end %>
-    </ul>
+    <ul>
   </div>
 <% end %>
 
 <%= form_for board do |f| %>
-  <class="form-group">
+  <div class="form-group">
     <%= f.label :name, '名前' %>
     <%= f.text_field :name, class: 'form-control' %>
-  </class=>
+  </div>
   <div class="form-group">
     <%= f.label :title, 'タイトル' %>
     <%= f.text_field :title, class: 'form-control' %>
